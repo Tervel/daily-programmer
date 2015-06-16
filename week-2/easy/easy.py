@@ -2,17 +2,17 @@ import sys, os
 
 
 def mainMenu():
-	print "Choose an option:"
-	print "1. Calculate force"
-	print "2. Calculate mass"
-	print "3. Calculate acceleration\n"
-	choice = raw_input(" >>  ")
+	print ("Choose an option:")
+	print ("1. Calculate force")
+	print ("2. Calculate mass")
+	print ("3. Calculate acceleration\n")
+	choice = input(" >>  ")
 	menuChoice(choice)
 
 	return
 
 def menuChoice(choice):
-	choice = choice.lower()
+	choice = str(choice)
 
 	if choice == '':
 		mainMenu()
@@ -20,7 +20,7 @@ def menuChoice(choice):
 		try:
 			menuActions[choice]()
 		except KeyError:
-			print "Invalid selection!\n"
+			print ("Invalid selection!\n")
 			mainMenu()
 
 	return
@@ -30,7 +30,7 @@ def calcForce():
 	acceleration = float(raw_input("Enter Acceleration: "))
 	force = mass * acceleration
 
-	print "\nForce: %d\n" % force
+	print ("\nForce: %d\n" % force)
 
 	mainMenu()
 	return 
@@ -41,7 +41,7 @@ def calcMass():
 	acceleration = float(raw_input("Enter Acceleration: "))
 	mass = force / acceleration
 
-	print "\nMass: %d\n" % mass
+	print ("\nMass: %d\n" % mass)
 
 	mainMenu()
 	return  
@@ -51,7 +51,7 @@ def calcAcceleration():
 	mass = float(raw_input("Enter Mass: "))
 	acceleration = force / mass
 
-	print "\nAcceleration: %d\n" % acceleration
+	print ("\nAcceleration: %d\n" % acceleration)
 
 	mainMenu()
 	return 
