@@ -1,7 +1,7 @@
 import random
 
 def getUserInput():
-	print("Hello, please enter the length of the password you wish to be generated:")
+	print ("Hello, please enter the length of the password you wish to be generated:")
 	userInput = input(" >>  ")
 
 	return int(userInput)
