@@ -17,6 +17,9 @@ operatorRegex = '[+, \-, *, /]+'
 separatorRegex = '[(, )]+'
 numRegex = '[0-9]+'
 
+def applyOperator(op, val1, val2):
+    return operations[op](val1, val2)
+
 def precedence(operator):
     return {
         '^': 4,
@@ -74,7 +77,7 @@ def calculate(userInput):
     print (output)
     print (stack)
 
-    return
+    return output
 
 def main():
     userInput = getUserInput()

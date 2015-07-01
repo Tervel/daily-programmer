@@ -16,8 +16,8 @@ def getInput():
 
     return userinput
 
-def applyOperator(op, val1, val2):
-    return operators[op](val1, val2)
+def applyOperator(operation, valueOne, valueTwo):
+    return operators[operation](valueOne, valueTwo)
 
 def main():
     results = []
