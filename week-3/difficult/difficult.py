@@ -18,6 +18,11 @@
 
 from urllib.request import urlopen
 
+# Local word list
+# wordFile = open("wordlist.txt", "r")
+# WORD_LIST = wordFile.read().split()
+# wordFile.close()
+
 WORD_LIST = urlopen('http://pastebin.com/raw.php?i=jSD873gL').read().decode().split()
 
 def main():
