@@ -23,7 +23,6 @@ func main() {
 	low := 1
 
 	number = random(high, low)
-	fmt.Print(number)
 
 	for guess != number {
 		fmt.Print("Your Guess: ")
